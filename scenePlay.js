@@ -80,9 +80,9 @@ var scenePlay = new Phaser.Class({
     //COSTUM FUNCTION
     this.gameOver = function () {
       let highscore = localStorage["highscore"] || 0;
-      if (myScene.scene > highscore) {
-        localStorage["highscore"] = myScene.score;
-      }
+if (myScene.score > highscore) {
+  localStorage["highscore"] = myScene.score;
+}
       myScene.scene.start("sceneMenu");
     };
 
@@ -119,8 +119,8 @@ var scenePlay = new Phaser.Class({
       var BG = this.add.image(bg_x, 768 / 2, "fg_loop_back");
       var FG = this.add.image(bg_x, 768 / 2, "fg_loop");
       //menambahkan custom data
-      BG.setData("kecepatan", 2);
-      FG.setData("kecepatan", 4);
+      BG.setData("kecepatan", 1);
+      FG.setData("kecepatan", 2);
       FG.setDepth(2);
       //memasukkan background dan foreground ke dalam array baru
       bg_awal.push(BG);
@@ -138,7 +138,7 @@ var scenePlay = new Phaser.Class({
       //karakter
       //sifat karakter, naik 5 pixel setiap frame
       //sama dengan this.chara.y - 5
-      this.chara.y -= 5;
+      this.chara.y -= 2;
 
       //batas karakter agar karakter tidak bisa jauh ke bawah
       if (this.chara.y > 690) this.chara.y = 690;
