@@ -4,9 +4,9 @@
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.js"></script>
     <script>
       var snd_ambience = null;
-      var layoutSize = { 'w' : 1024, 'h': 768 };
-      var X_POSITION ;
-      var Y_POSITION ;
+      var layoutSize = { w: 1024, h: 768 };
+      var X_POSITION;
+      var Y_POSITION;
     </script>
     <script src="sceneMenu.js"></script>
     <script src="scenePlay.js"></script>
@@ -22,8 +22,8 @@
           default: "arcade",
           arcade: {
             gravity: { y: 200 }, // Tambahkan gravitasi global
-          }
-        }
+          },
+        },
       };
 
       const game = new Phaser.Game(config);
